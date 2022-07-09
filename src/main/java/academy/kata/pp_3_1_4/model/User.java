@@ -26,7 +26,7 @@ public class User implements UserDetails {
     private String firstName;
     private String lastName;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    @ManyToMany(fetch = FetchType.LAZY)
     @Fetch(FetchMode.JOIN)
     @JoinTable(
             name = "users_roles",

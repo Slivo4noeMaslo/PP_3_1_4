@@ -66,7 +66,7 @@
                     <h2>Admin panel</h2>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#allUsers">Users table</a>
+                            <a class="nav-link active" data-toggle="tab" id="allUsersTable" href="#allUsers">Users table</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#newUser">New User</a>
@@ -199,7 +199,7 @@
      aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form id="formEditUser" name="formEditUser">
+            <form id="formEditUser">
                 <div class="modal-header">
                     <h5 class="modal-title">Edit user</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -247,7 +247,7 @@
                             <h1></h1>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" id="editFormCloseButton" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Edit</button>
                         </div>
                     </div>
@@ -256,6 +256,67 @@
         </div>
     </div>
 </div>
+
+<!--Модальное окно удаления пользователя-->
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog"
+     aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="formDeleteUser">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete user</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="form-group required">
+                        <div class="controls">
+                            <p>
+                                <label for="idDeleteUser"><strong>ID</strong>
+                                    <input class="form-control" type="number" name="id" id="idDeleteUser" disabled>
+                                </label>
+                            </p>
+                            <p>
+                                <label for="firstNameDeleteUser"><strong>First name</strong>
+                                    <input class="form-control" type="text" name="firstName" id="firstNameDeleteUser" disabled>
+                                </label>
+                            </p>
+                            <p>
+                                <label for="lastNameDeleteUser"><strong>Last name</strong>
+                                    <input class="form-control" type="text" name="lastName" id="lastNameDeleteUser" disabled>
+                                </label>
+                            </p>
+                            <p>
+                                <label for="ageDeleteUser"><strong>Age</strong>
+                                    <input class="form-control" type="number" name="age" id="ageDeleteUser" disabled>
+                                </label>
+                            </p>
+                            <p>
+                                <label for="emailDeleteUser"><strong>Email</strong>
+                                    <input class="form-control" type="email" name="email" id="emailDeleteUser" disabled>
+                                </label>
+                            </p>
+                            <label class="container-fluid col-6" for="rolesDeleteUser"><strong>Role</strong>
+                                <select class="form-control" id="rolesDeleteUser" name="roles" multiple size="2" disabled>
+
+                                </select>
+                            </label>
+                            <h1></h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="deleteFormCloseButton" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-danger btn btn-primary">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <!-- Отдельные JS для Popper и Bootstrap -->
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
