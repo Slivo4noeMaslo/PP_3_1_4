@@ -1,7 +1,6 @@
 package academy.kata.pp_3_1_4.service;
 
 import academy.kata.pp_3_1_4.model.User;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

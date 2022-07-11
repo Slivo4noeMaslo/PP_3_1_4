@@ -57,28 +57,6 @@ async function allUsers() {
         })
 }
 
-// async function getAllRoles(user) {
-//     await fetch("http://localhost:8080/api/roles")
-//         .then(res => res.json())
-//         .then(roles => {
-//             roles.forEach(role => {
-//                 let selectedRole = false;
-//                 for (let i = 0; i < user.roles.length; i++) {
-//                     if (user.roles[i].name === role.name) {
-//                         selectedRole = true;
-//                         break;
-//                     }
-//                 }
-//                 let el = document.createElement("option");
-//                 el.text = role.name.substring(5);
-//                 el.value = role.id;
-//                 if (selectedRole) el.selected = true;
-//                 console.log(el);
-//                 $('#rolesEditUser')[0].appendChild(el);
-//             })
-//         });
-// }
-
 async function newUser() {
     await fetch("http://localhost:8080/api/roles")
         .then(res => res.json())
